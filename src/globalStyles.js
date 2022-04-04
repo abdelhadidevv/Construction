@@ -10,6 +10,7 @@ const GlobalStyle = createGlobalStyle`
     font-family: 'Poppins', sans-serif;
   }
 `;
+export default GlobalStyle;
 
 export const Container = styled.div.attrs((props) => ({
   width: props.width,
@@ -26,6 +27,9 @@ export const Container = styled.div.attrs((props) => ({
   padding-left: ${({ pl }) => (pl ? pl : "0px")};
   padding-bottom: ${({ pb }) => (pb ? pb : "0px")};
   padding-top: ${({ pt }) => (pt ? pt : "0px")};
+  display: ${({ display }) => (display ? display : "block")};
+  justify-content: space-between;
+  align-items: center;
 `;
 
 export const AppContainer = styled.div`
@@ -44,12 +48,16 @@ export const BgImageContainer = styled.div`
 `;
 
 export const Section = styled.div.attrs((props) => ({
-  title: props.title,
+  name: props.name,
   pr: props.pr,
+  pl: props.pl,
+  pb: props.pb,
   pt: props.pt,
 }))`
   display: block;
   padding-right: ${({ pr }) => (pr ? pr : "0px")};
+  padding-left: ${({ pl }) => (pl ? pl : "0px")};
+  padding-bottom: ${({ pb }) => (pb ? pb : "0px")};
   padding-top: ${({ pt }) => (pt ? pt : "0px")};
 `;
 
@@ -91,5 +99,10 @@ export const MainButton = styled.button`
   color: ${({ outline }) => (outline ? "#18A7B9" : "#FFFFFF")};
 `;
 
-
-export default GlobalStyle;
+export const Heading2 = styled.h2`
+  font-size: 54px;
+  color: #313131;
+  font-weight: 500;
+  line-height: 120%;
+  display: inline;
+`;

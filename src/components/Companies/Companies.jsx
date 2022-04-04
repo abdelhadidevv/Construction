@@ -2,7 +2,7 @@ import React from "react";
 import { CompanyContainer, Icon } from "./CompaniesStyles";
 import { icon1, icon2, icon3, icon4, icon5 } from "../../assets/index";
 
-const Companys = () => {
+const Companies = () => {
   return (
     <CompanyContainer>
       <Icon src={icon5} />
@@ -14,4 +14,4 @@ const Companys = () => {
   );
 };
 
-export default Companys;
+export default Companies;
