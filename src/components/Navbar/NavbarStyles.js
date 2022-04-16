@@ -3,8 +3,8 @@ import styled from "styled-components";
 export const NavbarContainer = styled.div`
   width: 100%;
   position: static;
-  padding-left: 135px;
   padding-right: 85px;
+  padding-left: 135px;
   padding-top: 20px;
   display: inline-flex;
   justify-content: space-between;

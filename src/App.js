@@ -1,11 +1,3 @@
-import Navbar from "./components/Navbar/Navbar";
-import Stats from "./components/Stats/Stats";
-import Companies from "./components/Companies/Companies";
-import Points from "./components/ChooseUs/Points";
-
-import { CorneredImage } from "./components/ChooseUs/ChooseUs";
-import choose_us from "./assets/choose_us.png";
-
 import GlobalStyle, {
   AppContainer,
   Section,
@@ -17,7 +9,18 @@ import GlobalStyle, {
   Margin,
   MainButton,
   Heading2,
+  Heading3,
 } from "./globalStyles";
+
+import Navbar from "./components/Navbar/Navbar";
+import Stats from "./components/Stats/Stats";
+import Companies from "./components/Companies/Companies";
+import Points from "./components/ChooseUs/Points";
+import Engineer from "./components/Engineer/Engineer";
+
+import { CorneredImage } from "./components/ChooseUs/ChooseUs";
+import choose_us from "./assets/choose_us.png";
+import { user1, user2, user3 } from "./assets/index";
 
 function App() {
   return (
@@ -49,10 +52,12 @@ function App() {
             <Margin mt="90px" />
             <Stats />
           </Container>
-          <Companies />
+          <Container pl="135px" pt="147px" pr="80px">
+            <Companies />
+          </Container>
         </BgImageContainer>
       </Section>
-      <Section name="Why Choose us" pt="83px" pr="155px" pl="155px">
+      <Section name="Why Choose us" pt="90px" pr="140px" pl="140px">
         <Container display="flex">
           <Container>
             <Paragraph>
@@ -75,6 +80,41 @@ function App() {
           <CorneredImage src={choose_us} />
           <Points />
         </Container>
+      </Section>
+      <Section name="Our team" pt="137px" pr="135px" pl="135px">
+        <Container display="flex" flexDr="column">
+          <Heading3>Our Best Engineers</Heading3>
+          <Margin mt="30px" />
+          <Paragraph center width="672px">
+            Blessing welcomed ladyship she met humoured sir breeding her. Six
+            curiosity day assurance bed necessary.
+          </Paragraph>
+        </Container>
+        <Margin mt="80px" />
+        <Container display="flex" flexDr="row" width="100%" overflow>
+          <Engineer
+            avatar={user1}
+            username="Chris Evans"
+            location="Michigan, TX"
+            phone="989-653-2986"
+            email="ChrisEvans@const.com"
+          />
+          <Engineer
+            avatar={user3}
+            username="James Kiara"
+            location="Michigan, TX"
+            phone="989-653-2986"
+            email="JamesKiara@const.com"
+          />
+          <Engineer
+            avatar={user2}
+            username="Adam Gates"
+            location="Michigan, TX"
+            phone="989-653-2986"
+            email="AdamGates@const.com"
+          />
+        </Container>
+        <Margin mt="80px" />
       </Section>
     </AppContainer>
   );

@@ -22,12 +22,13 @@ export const Container = styled.div.attrs((props) => ({
 }))`
   width: ${({ width }) => (width ? width : "auto")};
   height: ${({ height }) => (height ? height : "auto")};
-  overflow: hidden;
+  overflow: ${({ overflow }) => (overflow ? "visible" : "hidden")};
   padding-right: ${({ pr }) => (pr ? pr : "0px")};
   padding-left: ${({ pl }) => (pl ? pl : "0px")};
   padding-bottom: ${({ pb }) => (pb ? pb : "0px")};
   padding-top: ${({ pt }) => (pt ? pt : "0px")};
   display: ${({ display }) => (display ? display : "block")};
+  flex-direction: ${({ flexDr }) => (flexDr ? flexDr : "initial")};
   justify-content: space-between;
   align-items: center;
 `;
@@ -36,6 +37,9 @@ export const AppContainer = styled.div`
   width: 100%;
   min-height: 100vh;
   overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 `;
 
 export const BgImageContainer = styled.div`
@@ -59,6 +63,7 @@ export const Section = styled.div.attrs((props) => ({
   padding-left: ${({ pl }) => (pl ? pl : "0px")};
   padding-bottom: ${({ pb }) => (pb ? pb : "0px")};
   padding-top: ${({ pt }) => (pt ? pt : "0px")};
+  width: 100%;
 `;
 
 export const TextHeader = styled.h1`
@@ -77,6 +82,9 @@ export const Paragraph = styled.span`
   font-size: 18px;
   color: #6b6b6b;
   font-weight: 400;
+  text-align: ${({ center }) => (center ? "center" : "start")};
+  width: ${({ width }) => (width ? width : "auto")};
+  height: ${({ height }) => (height ? height : "auto")};
 `;
 
 export const Margin = styled.div`
@@ -105,4 +113,11 @@ export const Heading2 = styled.h2`
   font-weight: 500;
   line-height: 120%;
   display: inline;
+`;
+
+export const Heading3 = styled.h2`
+  font-size: 54px;
+  color: #313131;
+  font-weight: 600;
+  line-height: 56px;
 `;
