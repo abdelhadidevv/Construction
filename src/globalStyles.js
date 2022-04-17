@@ -105,6 +105,7 @@ export const MainButton = styled.button`
   width: 214px;
   height: 64px;
   color: ${({ outline }) => (outline ? "#18A7B9" : "#FFFFFF")};
+  align-self: ${({ alignSelf }) => (alignSelf ? "flex-start" : "none")};
 `;
 
 export const Heading2 = styled.h2`

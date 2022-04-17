@@ -14,6 +14,7 @@ import choose_us from "./choose_us.png";
 import next from "./next.svg";
 import back from "./back.svg";
 import ceo from "./ceo.png";
+import map from "./map.png";
 
 import cotion_l from "./cotion_l.svg";
 import cotion_r from "./cotion_r.svg";
@@ -37,4 +38,5 @@ export {
   ceo,
   cotion_l,
   cotion_r,
+  map,
 };

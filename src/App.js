@@ -21,6 +21,10 @@ import {
   CeoTitle,
   CeoIcon,
   CeoMessage,
+  ContactUsTitle,
+  Input,
+  InputArea,
+  MapImage,
 } from "./AppStyles";
 
 import Navbar from "./components/Navbar/Navbar";
@@ -37,9 +41,9 @@ import {
   user3,
   next,
   back,
-  ceo,
   cotion_l,
   cotion_r,
+  map,
 } from "./assets/index";
 
 function App() {
@@ -147,7 +151,7 @@ function App() {
         </Container>
         <Margin mt="140px" />
       </Section>
-      <Section name="Message from CEO" img={ceo}>
+      <Section name="Message from CEO">
         <CeoContainer>
           <OpacityLayer>
             <CeoTitle>Message from CEO</CeoTitle>
@@ -174,6 +178,34 @@ function App() {
             <CeoIcon src={cotion_r} />
           </OpacityLayer>
         </CeoContainer>
+        <Margin mt="140px" />
+      </Section>
+      <Section name="Contact Us" pl="67px" pr="67px">
+        <Container display="flex" flexDr="column">
+          <ContactUsTitle>Contact Us</ContactUsTitle>
+          <Margin mt="30px" />
+          <Paragraph center width="672px">
+            Blessing welcomed ladyship she met humoured sir breeding her. Six
+            curiosity day assurance bed necessary.
+          </Paragraph>
+        </Container>
+        <Margin mt="80px" />
+        <Container display="flex" flexDr="row">
+          <Container display="flex" flexDr="column">
+            <Input placeholder="Name" />
+            <Margin mt="20px" />
+            <Input placeholder="Email" />
+            <Margin mt="20px" />
+            <Input placeholder="Subject" />
+            <Margin mt="20px" />
+            <InputArea placeholder="Massage" />
+            <Margin mt="53px" />
+            <MainButton alignSelf>Send Massage</MainButton>
+          </Container>
+          <Margin mr="30px" display />
+          <MapImage src={map} />
+        </Container>
+        <Margin mt="140px" />
       </Section>
     </AppContainer>
   );

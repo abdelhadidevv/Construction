@@ -62,3 +62,45 @@ export const CeoMessage = styled.p`
   margin: 0 91px;
   color: #fafafa;
 `;
+
+export const ContactUsTitle = styled.p`
+  font-weight: 600;
+  font-size: 54px;
+  line-height: 56px;
+  color: #313131;
+`;
+
+export const Input = styled.input`
+  width: 489px;
+  height: 64px;
+  font-weight: 400;
+  font-size: 18px;
+  color: #6b6b6b;
+  background: #f9f9f9;
+  border-radius: 7px;
+  border: none;
+  padding-left: 24px;
+  padding-bottom: 17px;
+  padding-top: 20px;
+  outline: none;
+  text-align: start;
+`;
+export const InputArea = styled.textarea`
+  width: 489px;
+  height: 200px;
+  font-weight: 400;
+  font-size: 18px;
+  color: #6b6b6b;
+  background: #f9f9f9;
+  border-radius: 7px;
+  border: none;
+  padding-left: 24px;
+  padding-bottom: 17px;
+  padding-top: 20px;
+  outline: none;
+  resize: none;
+`;
+export const MapImage = styled.img`
+  width: 782px;
+  height: 500px;
+`;
