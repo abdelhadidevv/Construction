@@ -1,4 +1,4 @@
-import styled, { css, createGlobalStyle } from "styled-components";
+import styled, { createGlobalStyle } from "styled-components";
 import image1 from "./assets/bgImage1.png";
 import image2 from "./assets/bgImage2.png";
 

@@ -12,6 +12,17 @@ import GlobalStyle, {
   Heading3,
 } from "./globalStyles";
 
+import {
+  ContainerControl,
+  ControlBtn,
+  Icon,
+  CeoContainer,
+  OpacityLayer,
+  CeoTitle,
+  CeoIcon,
+  CeoMessage,
+} from "./AppStyles";
+
 import Navbar from "./components/Navbar/Navbar";
 import Stats from "./components/Stats/Stats";
 import Companies from "./components/Companies/Companies";
@@ -20,7 +31,16 @@ import Engineer from "./components/Engineer/Engineer";
 
 import { CorneredImage } from "./components/ChooseUs/ChooseUs";
 import choose_us from "./assets/choose_us.png";
-import { user1, user2, user3 } from "./assets/index";
+import {
+  user1,
+  user2,
+  user3,
+  next,
+  back,
+  ceo,
+  cotion_l,
+  cotion_r,
+} from "./assets/index";
 
 function App() {
   return (
@@ -115,6 +135,45 @@ function App() {
           />
         </Container>
         <Margin mt="80px" />
+        <Container display="flex" flexDr="column" width="100%" overflow>
+          <ContainerControl>
+            <ControlBtn>
+              <Icon src={back} />
+            </ControlBtn>
+            <ControlBtn color>
+              <Icon src={next} />
+            </ControlBtn>
+          </ContainerControl>
+        </Container>
+        <Margin mt="140px" />
+      </Section>
+      <Section name="Message from CEO" img={ceo}>
+        <CeoContainer>
+          <OpacityLayer>
+            <CeoTitle>Message from CEO</CeoTitle>
+            <CeoIcon src={cotion_l} alignSelf />
+            <CeoMessage>
+              Shewing met parties gravity husband sex pleased. On to no kind do
+              next feel held walk. Last own loud and knew give gay four.
+              Sentiments motionless or principles preference excellence am.
+              Literature surrounded insensible at indulgence or to admiration
+              remarkably. Matter future lovers desire marked boy use. Chamber
+              reached do he nothing be.
+              <br />
+              <br />
+              Do in laughter securing smallest sensible no mr hastened. As
+              perhaps proceed in in brandon of limited unknown greatly.
+              Distrusts fulfilled happiness unwilling as explained of difficult.
+              No landlord of peculiar ladyship attended if contempt ecstatic.
+              Loud wish made on is am as hard. Court so avoid in plate hence. Of
+              received mr breeding concerns peculiar securing landlord. Spot to
+              many it four bred soon well to. Or am promotion in no departure
+              abilities. Whatever landlord yourself at by pleasure of children
+              be.
+            </CeoMessage>
+            <CeoIcon src={cotion_r} />
+          </OpacityLayer>
+        </CeoContainer>
       </Section>
     </AppContainer>
   );
