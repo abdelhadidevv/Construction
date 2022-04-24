@@ -12,12 +12,18 @@ import bgImage1 from "./bgImage1.png";
 import bgImage2 from "./bgImage2.png";
 import choose_us from "./choose_us.png";
 import next from "./next.svg";
+import next1 from "./next1.svg";
 import back from "./back.svg";
 import ceo from "./ceo.png";
 import map from "./map.png";
-
-import cotion_l from "./cotion_l.svg";
-import cotion_r from "./cotion_r.svg";
+import blog1 from "./blog1.png";
+import blog2 from "./blog2.png";
+import coition_l from "./coition_l.svg";
+import coition_r from "./coition_r.svg";
+import facebook from "./facebook.svg";
+import twitter from "./twitter.svg";
+import linkedin from "./linkedin.svg";
+import send from "./send.svg";
 
 export {
   icon1,
@@ -36,7 +42,14 @@ export {
   next,
   back,
   ceo,
-  cotion_l,
-  cotion_r,
+  coition_l,
+  coition_r,
   map,
+  blog1,
+  blog2,
+  next1,
+  facebook,
+  twitter,
+  linkedin,
+  send,
 };

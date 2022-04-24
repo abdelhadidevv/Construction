@@ -45,29 +45,25 @@ export const OpacityLayer = styled.div`
   align-items: center;
   padding: 176px 200px;
 `;
+
 export const CeoTitle = styled.p`
   font-size: 54px;
   font-weight: 500;
   line-height: 76px;
   color: #fafafa;
 `;
+
 export const CeoIcon = styled.img`
   size: 64;
   align-self: ${({ alignSelf }) => (alignSelf ? "flex-start" : "flex-end")};
 `;
+
 export const CeoMessage = styled.p`
   font-weight: 400;
   font-size: 18px;
   line-height: 28px;
   margin: 0 91px;
   color: #fafafa;
-`;
-
-export const ContactUsTitle = styled.p`
-  font-weight: 600;
-  font-size: 54px;
-  line-height: 56px;
-  color: #313131;
 `;
 
 export const Input = styled.input`
@@ -85,6 +81,7 @@ export const Input = styled.input`
   outline: none;
   text-align: start;
 `;
+
 export const InputArea = styled.textarea`
   width: 489px;
   height: 200px;
@@ -100,6 +97,7 @@ export const InputArea = styled.textarea`
   outline: none;
   resize: none;
 `;
+
 export const MapImage = styled.img`
   width: 782px;
   height: 500px;

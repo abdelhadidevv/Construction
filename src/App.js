@@ -21,30 +21,34 @@ import {
   CeoTitle,
   CeoIcon,
   CeoMessage,
-  ContactUsTitle,
   Input,
   InputArea,
   MapImage,
 } from "./AppStyles";
 
-import Navbar from "./components/Navbar/Navbar";
-import Stats from "./components/Stats/Stats";
-import Companies from "./components/Companies/Companies";
-import Points from "./components/ChooseUs/Points";
-import Engineer from "./components/Engineer/Engineer";
-
-import { CorneredImage } from "./components/ChooseUs/ChooseUs";
-import choose_us from "./assets/choose_us.png";
 import {
   user1,
   user2,
   user3,
   next,
   back,
-  cotion_l,
-  cotion_r,
+  coition_l,
+  coition_r,
   map,
+  blog1,
+  blog2,
+  next1,
+  choose_us,
 } from "./assets/index";
+
+import Navbar from "./components/Navbar/Navbar";
+import Stats from "./components/Stats/Stats";
+import Companies from "./components/Companies/Companies";
+import Points from "./components/ChooseUs/Points";
+import Engineer from "./components/Engineer/Engineer";
+import Footer from "./components/Footer/Footer";
+import Blog, { Slider } from "./components/Blog/Blog";
+import { CorneredImage } from "./components/ChooseUs/ChooseUs";
 
 function App() {
   return (
@@ -125,7 +129,7 @@ function App() {
           />
           <Engineer
             avatar={user3}
-            username="James Kiara"
+            username="James Kara"
             location="Michigan, TX"
             phone="989-653-2986"
             email="JamesKiara@const.com"
@@ -149,13 +153,12 @@ function App() {
             </ControlBtn>
           </ContainerControl>
         </Container>
-        <Margin mt="140px" />
       </Section>
-      <Section name="Message from CEO">
+      <Section name="Message from CEO" pt="140px">
         <CeoContainer>
           <OpacityLayer>
             <CeoTitle>Message from CEO</CeoTitle>
-            <CeoIcon src={cotion_l} alignSelf />
+            <CeoIcon src={coition_l} alignSelf />
             <CeoMessage>
               Shewing met parties gravity husband sex pleased. On to no kind do
               next feel held walk. Last own loud and knew give gay four.
@@ -175,14 +178,13 @@ function App() {
               abilities. Whatever landlord yourself at by pleasure of children
               be.
             </CeoMessage>
-            <CeoIcon src={cotion_r} />
+            <CeoIcon src={coition_r} />
           </OpacityLayer>
         </CeoContainer>
-        <Margin mt="140px" />
       </Section>
-      <Section name="Contact Us" pl="67px" pr="67px">
+      <Section name="Contact Us" pl="67px" pr="67px" pt="140px">
         <Container display="flex" flexDr="column">
-          <ContactUsTitle>Contact Us</ContactUsTitle>
+          <Heading3>Contact Us</Heading3>
           <Margin mt="30px" />
           <Paragraph center width="672px">
             Blessing welcomed ladyship she met humoured sir breeding her. Six
@@ -205,7 +207,44 @@ function App() {
           <Margin mr="30px" display />
           <MapImage src={map} />
         </Container>
-        <Margin mt="140px" />
+      </Section>
+      <Section name="Blogs" pl="144px" pr="144px" pt="140px">
+        <Container display="flex" flexDr="column">
+          <Heading3>Latest Blogs</Heading3>
+          <Margin mt="30px" />
+          <Paragraph center width="672px">
+            Blessing welcomed ladyship she met humoured sir breeding her. Six
+            curiosity day assurance bed necessary.
+          </Paragraph>
+          <Margin mt="80px" />
+        </Container>
+        <Container display="flex" flexDr="row" justify="center">
+          <Blog img={blog1} />
+          <Margin mr="60px" />
+          <Blog img={blog2} />
+          <Margin mr="90px" />
+          <Slider />
+        </Container>
+      </Section>
+      <Section name="Newsletter" pl="144px" pr="144px" pt="140px">
+        <Container display="flex" flexDr="column">
+          <Heading3>
+            Subscribe to our <br /> Newsletter
+          </Heading3>
+          <Margin mt="30px" />
+          <Paragraph center width="556px">
+            Age sold some full like rich new. Amounted repeated as believed in
+            confined juvenile.
+          </Paragraph>
+          <Margin mt="40px" />
+          <MainButton Icon width height>
+            SUBSCRIBE <Margin mr="20px" />
+            <Icon src={next1} />
+          </MainButton>
+        </Container>
+      </Section>
+      <Section name="Footer" pl="155px" pr="155px" pt="160px" pb="36px">
+        <Footer />
       </Section>
     </AppContainer>
   );

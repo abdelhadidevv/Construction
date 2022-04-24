@@ -10,6 +10,7 @@ const GlobalStyle = createGlobalStyle`
     font-family: 'Poppins', sans-serif;
   }
 `;
+
 export default GlobalStyle;
 
 export const Container = styled.div.attrs((props) => ({
@@ -29,7 +30,7 @@ export const Container = styled.div.attrs((props) => ({
   padding-top: ${({ pt }) => (pt ? pt : "0px")};
   display: ${({ display }) => (display ? display : "block")};
   flex-direction: ${({ flexDr }) => (flexDr ? flexDr : "initial")};
-  justify-content: space-between;
+  justify-content: ${({ justify }) => (justify ? justify : "space-between")};
   align-items: center;
 `;
 
@@ -102,10 +103,15 @@ export const MainButton = styled.button`
   display: inline;
   border: ${({ outline }) => (outline ? "1px solid #18a7b9" : "none")};
   border-radius: 40px 5px;
-  width: 214px;
-  height: 64px;
+  width: ${({ width }) => (width ? "220px" : "214px")};
+  height: ${({ height }) => (height ? "56px" : "64px")};
   color: ${({ outline }) => (outline ? "#18A7B9" : "#FFFFFF")};
   align-self: ${({ alignSelf }) => (alignSelf ? "flex-start" : "none")};
+  text-align: center;
+  display: ${({ Icon }) => (Icon ? "flex" : "inline")};
+  flex-direction: ${({ Icon }) => (Icon ? "row" : "none")};
+  justify-content: ${({ Icon }) => (Icon ? "center" : "none")};
+  align-items: ${({ Icon }) => (Icon ? "center" : "none")};
 `;
 
 export const Heading2 = styled.h2`
@@ -121,4 +127,5 @@ export const Heading3 = styled.h2`
   color: #313131;
   font-weight: 600;
   line-height: 56px;
+  text-align: center;
 `;
